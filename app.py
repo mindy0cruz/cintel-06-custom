@@ -44,12 +44,12 @@ ICONS = {
 # ---------------------------
 # UI
 # ---------------------------
-ui.page_opts(title="Tips Dashboard", fillable=True)
+ui.page_opts(title="Mindy's Tip Dashboard", fillable=True)
 
 with ui.sidebar():
     ui.input_slider(
         "total_bill",
-        "Total Bill:",
+        "Bill Total:",
         min=bill_rng[0],
         max=bill_rng[1],
         value=bill_rng,
@@ -58,7 +58,7 @@ with ui.sidebar():
 
     ui.input_checkbox_group(
         "gender",
-        "Select Gender:",
+        "Gender:",
         choices={
             "Male": ui.span("Male", style="color:red;"),
             "Female": ui.span("Female", style="color:blue;"),
@@ -68,7 +68,7 @@ with ui.sidebar():
 
     ui.input_checkbox_group(
         "selected_time",
-        "Choose Time of Service:",
+        "Meal Time:",
         choices=["Lunch", "Dinner"],
         selected=["Lunch", "Dinner"],
         inline=True,
